@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding: 20px;
+}
+
+.print{
+    display: none;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 600px;
+}
+
+.print h1{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+@media print{
+    .print {
+        display: block;
+    }
+
+    .container {
+        display: none;
+    }
+}

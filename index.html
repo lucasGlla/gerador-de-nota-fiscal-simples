@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissor de NFs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        Valor da venda:
+        <input type="number" id="valor">
+        <br><br>
+        Itens vendidos:
+        <input type="text" id="vendas">
+        <br><br>
+        Porcentagem do irpf:
+        <input type="number" id="irpf">
+        <br><br>
+        Porcentagem do pis:
+        <input type="number" id="pis">
+        <br><br>
+        Porcentagem do cofins:
+        <input type="number" id="cofins">
+        <br><br>
+        Porcentagem do inss:
+        <input type="number" id="inss">
+        <br><br>
+        Porcentagem do issqn:
+        <input type="number" id="issqn">
+        <br><br>
+        <button onclick="gerarNFs()">Enviar</button>
+    </div>
+
+    <div class="print">
+        <h1>Nota Fiscal - <span id="notaFiscal"></span></h1>
+        <p>Fatura</p>
+        <p>---------------------------------------------------------------</p>
+        <p>
+            Número: <span id="numeroNF"></span>
+            Emissão: <span id="nfDataEmissao"></span>
+            Vencimento: <span id="nfDataVencimento"></span>
+            Valor: <span id="nfValor"></span>   
+        </p>
+        
+        <p>---------------------------------------------------------------</p>
+        <p>Cálculo do imposto</p>
+        <p>---------------------------------------------------------------</p>
+        <p>
+            IRPF: <span id="nfIrpf"></span> |
+            PIS: <span id="nfPis"></span> |
+            COFINS: <span id="nfCofins"></span> |
+            INSS: <span id="nfInss"></span> |
+            <br>
+            ISSQN: <span id="nfIssqn"></span> |
+            Total de Impostos: R$ <span id="totalImpostos"></span> |
+            Valor Líquido: R$ <span id="valorLiquido"></span>
+        </p>
+        <p>-----------------------------------------------------</p>
+        <p>Itens da nota fiscal: <span id="nfVendas"></span></p>
+        <br><br>
+        <svg id="codigoBarra"></svg>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode/dist/JsBarcode.all.min.js"></script>
+</body>
+</html>
