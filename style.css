@@ -3,8 +3,28 @@
     margin: 0;
 }
 
+body{
+    text-align: center;
+    background: #D3D3D3;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+
 .container{
+    width: 350px;
+    height: 280px;
+    background: white;
     padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 60px;
 }
 
 .print{
@@ -24,6 +44,10 @@
 @media print{
     .print {
         display: block;
+    }
+
+    #head{
+        display: none;
     }
 
     .container {
